@@ -1,0 +1,6 @@
+{
+  "name": "Aurea - Sistema de Invitaciones Digitales Personalizadas",
+  "description": "Plataforma profesional para crear, personalizar, gestionar y compartir invitaciones digitales interactivas para bodas, XV años, cumpleaños y eventos sociales con enlaces privados, códigos de acceso y confirmación RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

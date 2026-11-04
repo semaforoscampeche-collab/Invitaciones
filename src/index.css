@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif-luxury: "Cormorant Garamond", serif;
+  --font-display-elegant: "Playfair Display", serif;
+  --font-royal: "Cinzel", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-handwriting: "Sacramento", cursive;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom animations for envelope & petals */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg);
+  }
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(80px, 110vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.shimmer-gold-text {
+  background: linear-gradient(90deg, #b8860b 0%, #ffd700 25%, #fff8dc 50%, #ffd700 75%, #b8860b 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerGold 5s linear infinite;
+}
+
+.wax-seal-shadow {
+  box-shadow: 0 10px 25px -5px rgba(184, 134, 11, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.envelope-fold-shadow {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
